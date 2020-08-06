@@ -9,8 +9,18 @@ Where I am obtaining my data?
 As a licensed real estate agent in Massachusetts, I am able to pull data from the Massachusetts MLS. Data includes last sale date, last sale price, year built, 
 levels, bedrooms, bathrooms, lot size, style, basement, condition, etc.
 
-I will pull the data from the 231 zip codes listed on bestplaces.net as zip codes that are part of the Boston-Cambridge-Newton Metropolitan Statistical Area. 
-I will look at data from the past 10 years.
+I can pull the data from the 231 zip codes listed on bestplaces.net as zip codes that are part of the Boston-Cambridge-Newton Metropolitan Statistical Area. 
+I will look at data from the past 5-10 years.
+
+I can also just look at one community. I would choose Needham, MA because this is where I used to sell and build property. I can look at which properties sold in the past 5 years. I can then cross reference those addresses with data from the following website:
+http://epas.csc-ma.us/PublicAccess/Pages/ParcelSummary.aspx?MenuID=3&LinkID=467901&Commcode=199
+http://epas.csc-ma.us/PublicAccess/Pages/Residence.aspx?MenuID=2
+
+If I can scrape this data, I will be able to have more information on the particular property (# bedrooms, # bathrooms, etc).
+
+I would also like to add the school district as a variable for each property. The elementary school district determines which part of town the property is in.
+http://www.needham.k12.ma.us/UserFiles/Servers/Server_64429/File/Departments/School%20Committee/StreetList_SchoolDist_2019%20(1).pdf
+
 
 Models and Feature Engineering
 
