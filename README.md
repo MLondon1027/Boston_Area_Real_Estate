@@ -49,3 +49,7 @@ The final model resulted in an RMSE of $19,343 and an MAE of $13,283.
 ![Images](/images/permutation_importance.png)
 
 Looking at the permutation importance plot of the top 10 features, we are able to confirm that OverallQual (Overall Quality) and GrLivArea (Living Area Above Grade) are in fact the two most important features to the model. This confirms what was expected and matches with the two highest correlated features on the correlation heatmap.
+
+# What next?
+
+I would like to look at including more features to see if it would improve the model. In particular, it would be interesting to include other location based features such as traffic patterns and school ratings to see how important they are to the model.
