@@ -29,7 +29,7 @@ By looking at a correlation matrix, we are able to see that OverallQual (Overall
 
 ![Images](/images/heatmap.png)
 
-# Modeling
+# Model Results
 
 I created a baseline model with features that appeared important to the sale price during the EDA process. The baseline model used the following features:
 1) Neighborhood
@@ -44,4 +44,8 @@ I used both Linear Regression and Gradient Boosted Regressor models. The Gradien
 
 I did some feature engineering (such as combining the number of full and half baths to total bathrooms and creating an Interior Age variable that was the most recent year of year built and year remodeled). I determined that including all of the features helped the model perform best. I used GridSearch to hypertune the model parameters.
 
-The final model resulted in an RMSE of $19,343 and an MAE of $13,283. 
+The final model resulted in an RMSE of $19,343 and an MAE of $13,283.
+
+![Images](/images/permutation_importance.png)
+
+Looking at the permutation importance plot of the top 10 features, we are able to confirm that OverallQual (Overall Quality) and GrLivArea (Living Area Above Grade) are in fact the two most important features to the model. This confirms what was expected and matches with the two highest correlated features on the correlation heatmap.
