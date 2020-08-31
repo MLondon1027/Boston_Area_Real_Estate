@@ -15,5 +15,16 @@ The data set began with 2,919 properties and 79 predictor variables. After sifti
 # Exploration
 I analyzed the distribution of the sale price and we can see that the majority hover in the $100,000-$200,000 range, with a mean sale price of $180,921 and median sale price of $163,000. 
 
-![Images](Dist_Sale_Price.png)
-![Images](Year_Sold.png)
+![Images](/images/Dist_Sale_Price.png)
+
+The properties were sold between 2006-2010. Upon an analysis of the count of homes sold each year, we can see that the number drops in 2010. This is likely due to the recession.
+
+![Images](/images/Year_Sold.png)
+
+Location is often assumed to be the most important variable in the price of real estate. By looking at the distribution of the sales price for various neighborhoods, we can see that the three highest priced neighborhoods are Northridge, Northridge Heights, and Stonebrook.
+
+![Images](/Neigh_Sale_Price_FINAL.png)
+
+By looking at a correlation matrix, we are able to see that OverallQual (Overall Quality of the home's finishes), GrLivingArea (Living area above grade), and ExterCond (External Condition) are the non categorical variables most correlated with the Sale Price. In addition, we can see some collinearity between features. TotRmsAbvGrd (Total rooms above grade ) and GrLivingArea (Living area above grade) are highly correlated, which makes sense because as the number of rooms increase, the square footage increases and vice versa. GarageCars and GarageArea are also highly correlated for the same reason.
+
+![Images](/heatmap.png)
