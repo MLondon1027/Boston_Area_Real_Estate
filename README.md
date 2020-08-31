@@ -15,5 +15,5 @@ The data set began with 2,919 properties and 79 predictor variables. After sifti
 # Exploration
 I analyzed the distribution of the sale price and we can see that the majority hover in the $100,000-$200,000 range, with a mean sale price of $180,921 and median sale price of $163,000. 
 
-![Images](Dist_Sale_Price.png)
-![Images](Year_Sold.png)
+![Images](/images/Dist_Sale_Price.png)
+![Images](/images/Year_Sold.png)
