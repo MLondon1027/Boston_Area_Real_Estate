@@ -1,5 +1,5 @@
 # Real Estate Price Predictor
-The goal of this project was to predict real estate sales prices for houses located in Ames, Iowa between 2006-2010. I did visualization, feature engineering, and explored both linear and tree based regression models.
+The goal of this project was to predict real estate sales prices for houses located in Ames, Iowa between 2006-2010. I visualized the data, did feature engineering, and explored both linear and tree based regression models.
 
 # Background
 I have a background in several areas of the real estate sector, including developing, listing, and selling homes. The sale price of a home is difficult to predict and relies on much more than the typical features one would think of, such as size and location. These still remain important. However, there are other factors such as macroeconomic indicators and competing inventory factors that make it notoriously difficult to model home prices. In addition, real estate is valued at the micro level; each community places a different weight on each factor.
@@ -23,8 +23,25 @@ The properties were sold between 2006-2010. Upon an analysis of the count of hom
 
 Location is often assumed to be the most important variable in the price of real estate. By looking at the distribution of the sales price for various neighborhoods, we can see that the three highest priced neighborhoods are Northridge, Northridge Heights, and Stonebrook.
 
-![Images](/Neigh_Sale_Price_FINAL.png)
+![Images](/images/Neigh_Sale_Price_FINAL.png)
 
 By looking at a correlation matrix, we are able to see that OverallQual (Overall Quality of the home's finishes), GrLivingArea (Living area above grade), and ExterCond (External Condition) are the non categorical variables most correlated with the Sale Price. In addition, we can see some collinearity between features. TotRmsAbvGrd (Total rooms above grade ) and GrLivingArea (Living area above grade) are highly correlated, which makes sense because as the number of rooms increase, the square footage increases and vice versa. GarageCars and GarageArea are also highly correlated for the same reason.
 
-![Images](/heatmap.png)
+![Images](/images/heatmap.png)
+
+# Modeling
+
+I created a baseline model with features that appeared important to the sale price during the EDA process. The baseline model used the following features:
+1) Neighborhood
+2) Living Area Above Grade
+3) Overall quality
+4) Lot size
+5) Year remodeled
+6) Building type
+7) Total basement square feet
+
+I used both Linear Regression and Gradient Boosted Regressor models. The Gradient Boosted Regressor model outperformed the Linear Regression model, performing with an RMSE of $26,056 and a MAE of $17,612. After looking at the residual plots, I determined that the models were struggling to predict on the highest priced homes, particularly over $600,000. After some deeper digging, I determined that the model was failing on homes that were larger than 4,000 square feet and removed those four properties.
+
+I did some feature engineering (such as combining the number of full and half baths to total bathrooms and creating an Interior Age variable that was the most recent year of year built and year remodeled). I determined that including all of the features helped the model perform best. I used GridSearch to hypertune the model parameters.
+
+The final model resulted in an RMSE of $19,343 and an MAE of $13,283. 
